@@ -13,10 +13,14 @@ input不會直達memory cell，同樣memory cell的內容也不會直接輸出�
 與RNN不同，RNN無法清除上次狀態留下的影響，這會導致長期依賴等問題，也就是系統當前狀很容易受系統先前的狀態影響．相反地，RNN也無法擁有較長的記憶能力，而LSTM透過forget gate可以決定留多少資訊量給下次的狀態．
 input gate會縮放input進memory cell，同樣output gate也會縮放memory cell的內容當作輸出．
 
-# Pre-trained LSTM
-## Predict-one Model
-這個模型這個利用前30天的價格預測未來一天的價格．該模型表現為所有模型中表現最好．對LSTM的recurrent kernel使用L1和L2正則化就能有效抑制overfitting．
+# Model
 
+## Predict-five Model(Primary Model)
+![predict-5](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-5.jpg)
+
+## Pre-trained LSTM
+### Predict-one Model
+這個模型這個利用前30天的價格預測未來一天的價格．該模型表現為所有模型中表現最好．對LSTM的recurrent kernel使用L1和L2正則化就能有效抑制overfitting．
 
 | Model | Performance |
 |:---------:|:---------:|
@@ -26,7 +30,7 @@ input gate會縮放input進memory cell，同樣output gate也會縮放memory cel
 |:---------:|:---------:|
 | 7.26 | 19.11 |
 
-## LSTM Autoencoder
+### LSTM Autoencoder
 首先只有一個LSTM cell輸入是一個sequence，Encoder在輸入為sequence的結尾輸出一個lantent code(many2one)．Decoder重複使用lantent code當作輸入，每次輸入都對應一個輸出，直到輸出的sequence長度等於輸入，Loss Function為MSE．
 非常容易overfitting，對LSTM的recurrent kernel使用L1和L2正則化和dropout以及發現對輸出使用L1和L2正則化對Test Score表現較好，該模型表現為所有模型中表現最差．
 
@@ -37,7 +41,6 @@ input gate會縮放input進memory cell，同樣output gate也會縮放memory cel
 | Train Score(RMSE) | Test Score(RMSE) |
 |:---------:|:---------:|
 | 2.85 | 154.09 |
-
 
 
 
