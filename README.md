@@ -37,7 +37,7 @@ Predict-five Model中的LSTM可以替換成Pre-trained LSTM．
 
 | Model | Performance | Training Loss |
 |:---------:|:---------:|:---------:|
-|![lstm-ae](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-019-55320-6/MediaObjects/41598_2019_55320_Fig3_HTML.png?as=webp)|![lstm-ae performance](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/lstm-ae_p.jpg)|![lstm-ae loss](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/lstm-ae_loss.jpg)|
+|![lstm-ae](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-019-55320-6/MediaObjects/41598_2019_55320_Fig3_HTML.png?as=webp)|![lstm-ae performance](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/lstm-ae_p.jpg)|![lstm-ae loss](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/lstmae_loss.jpg)|
 
 | Train Score(RMSE) | Test Score(RMSE) |
 |:---------:|:---------:|
@@ -47,9 +47,9 @@ Predict-five Model中的LSTM可以替換成Pre-trained LSTM．
 
 |#| Performance  | Train Score(RMSE) | Test Score(RMSE) | Training Loss |
 |:---------:|:---------:|:---------:|:---------:|:---------:|
-| Pre-trained LSTM using Predict-one | ![predict-five predict-one performance](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-5_predict-1_p.jpg) | 11.38 | 70.55 |
-| Pre-trained LSTM using LSTM-AE | ![predict-five lstm-ae performance](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-5_lstmae_p.jpg) | 9.30 | 56.95 |
-| Not using Pre-trained LSTM | ![not using pre-trained lstm performance](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-5_non_p.jpg) | 9.14 | 72.35 |
+| Pre-trained LSTM using Predict-one | ![predict-five predict-one performance](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-5_predict-1_p.jpg) | 11.38 | 70.55 |![predict-five predict-one loss](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-5_predict-1_loss.jpg)|
+| Pre-trained LSTM using LSTM-AE | ![predict-five lstm-ae performance](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-5_lstmae_p.jpg) | 9.30 | 56.95 |![predict-five lstm-ae loss](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-5_lstmae_loss.jpg)|
+| Not using Pre-trained LSTM | ![not using pre-trained lstm performance](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-5_non_p.jpg) | 9.14 | 72.35 |![not using pre-trained lstm loss](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-5_non_loss.jpg)|
 
 
 
