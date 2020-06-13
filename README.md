@@ -18,6 +18,7 @@ input gate會縮放input進memory cell，同樣output gate也會縮放memory cel
 | Model | Performance |
 |:---------:|:---------:|
 |![predict-one](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-one.jpg)|![predict-one performance](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-one_p.jpg)|
+
 | Train Score(RMSE) | Test Score(RMSE) |
 |:---------:|:---------:|
 | 8.11 | 49.38 |
