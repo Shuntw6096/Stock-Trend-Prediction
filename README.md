@@ -51,6 +51,16 @@ Predict-five Model中的LSTM可以替換成Pre-trained LSTM．
 | Pre-trained LSTM using LSTM-AE | ![predict-five lstm-ae performance](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-5_lstmae_p.jpg) | 9.30 | 56.95 |![predict-five lstm-ae loss](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-5_lstmae_loss.jpg)|
 | Not using Pre-trained LSTM | ![not using pre-trained lstm performance](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-5_non_p.jpg) | 9.14 | 72.35 |![not using pre-trained lstm loss](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-5_non_loss.jpg)|
 
+# Dig deeper into the model
+
+| Model | LSTM Weight |
+|:---------:|:---------:|
+| LSTM-AE |![lstm-ae lstm weight](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/lstmae_weight.jpg)|
+| Predict-one |![predict-one lstm weight](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-1_weight.jpg)|
+| Predict-five - Predict-one |![predict-five - predict-one lstm weight](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-5_predict-1_w.jpg)|
+| Predict-five - LSTM-AE |![predict-five - lstm-ae lstm weight](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-5_lstmae_w.jpg)|
+| Predict-five - Not using pretrained LSTM |![predict-five - not using pretrained lstm lstm weight](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-5_non_w.jpg)|
+
 
 
 
