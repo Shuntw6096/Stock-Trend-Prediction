@@ -59,7 +59,10 @@ Predict-five Model中的LSTM可以替換成Pre-trained LSTM．
 | Predict-one |![predict-one lstm weight](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-1_weight.jpg)|
 | Predict-five - Predict-one |![predict-five - predict-one lstm weight](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-5_predict-1_w.jpg)|
 | Predict-five - LSTM-AE |![predict-five - lstm-ae lstm weight](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-5_lstmae_w.jpg)|
-| Predict-five - Not using pretrained LSTM |![predict-five - not using pretrained lstm lstm weight](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-5_non_w.jpg)|
+| Predict-five - Not using pre-trained LSTM |![predict-five - not using pretrained lstm lstm weight](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-5_non_w.jpg)|
+
+從各model看得出kernel的權重分布大同小異都接近uniform distribution，而關鍵應該是bias和recurrent kernel的權重分布．LSTM-AE的擬合能力有問題從它的recurrent kernel權重分布就察覺得到，剩下四個模型的recurrent kernel的權重分布明顯區分成兩種，但是擬合能力都沒有問題．在bias方面，Predict-five的三個模型中，就屬使用LSTM-AE Pre-trained LSTM的權重分布較不一樣，權重的豐富度較高，而沒有使用Pre-trained LSTM的Test Error較高，也從其bias的分布看出有明顯鴻溝．所以Predict-five三者明顯的差異應該是bias，三者在測試集的表現接近平行．  
+![predict-5 performance comparison](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-5_p_cmp.jpg)
 
 
 
