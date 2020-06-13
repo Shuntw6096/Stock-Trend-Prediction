@@ -25,7 +25,7 @@ Predict-five Model中的LSTM可以替換成Pre-trained LSTM．
 
 | Model | Performance | Training Loss |
 |:---------:|:---------:|:---------:|
-|![predict-one](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-1.jpg)|![predict-one performance](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-one_p.jpg)|![predict-one loss](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-1_loss.jpg)|
+|![predict-one](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-1.jpg)|![predict-one performance](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-1_p.jpg)|![predict-one loss](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-1_loss.jpg)|
 
 | Train Score(RMSE) | Test Score(RMSE) |
 |:---------:|:---------:|
