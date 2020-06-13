@@ -23,9 +23,9 @@ Predict-five Model中的LSTM可以替換成Pre-trained LSTM．
 ### Predict-one Model
 這個模型這個利用前30天的價格預測未來一天的價格．該模型表現為所有模型中表現最好．對LSTM的recurrent kernel使用L1和L2正則化就能有效抑制overfitting．
 
-| Model | Performance |
-|:---------:|:---------:|
-|![predict-one](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-one.jpg)|![predict-one performance](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-one_p.jpg)|
+| Model | Performance | Training Loss |
+|:---------:|:---------:|:---------:|
+|![predict-one](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-1.jpg)|![predict-one performance](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-one_p.jpg)|![predict-one loss](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-1_loss.jpg)|
 
 | Train Score(RMSE) | Test Score(RMSE) |
 |:---------:|:---------:|
@@ -35,15 +35,21 @@ Predict-five Model中的LSTM可以替換成Pre-trained LSTM．
 首先Encoder LSTM cell輸入是一個sequence，Encoder在輸入為sequence的結尾輸出一個lantent code(many2one)．Decoder重複使用lantent code當作輸入，每次輸入都對應一個輸出，直到輸出的sequence長度等於輸入，Loss Function為MSE．
 非常容易overfitting，對LSTM的recurrent kernel使用L1和L2正則化和dropout以及發現對輸出使用L1和L2正則化對Test Score表現較好，該模型表現為所有模型中表現最差．
 
-| Model | Performance |
-|:---------:|:---------:|
-|![lstm-ae](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-019-55320-6/MediaObjects/41598_2019_55320_Fig3_HTML.png?as=webp)|![predict-one performance](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/lstm-ae_p.jpg)|
+| Model | Performance | Training Loss |
+|:---------:|:---------:|:---------:|
+|![lstm-ae](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-019-55320-6/MediaObjects/41598_2019_55320_Fig3_HTML.png?as=webp)|![lstm-ae performance](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/lstm-ae_p.jpg)|![lstm-ae loss](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/lstm-ae_loss.jpg)|
 
 | Train Score(RMSE) | Test Score(RMSE) |
 |:---------:|:---------:|
 | 2.85 | 154.09 |
 
-# Experiment
+# Predict-five Model Experiment
+
+|#| Performance  | Train Score(RMSE) | Test Score(RMSE) | Training Loss |
+|:---------:|:---------:|:---------:|:---------:|:---------:|
+| Pre-trained LSTM using Predict-one | ![predict-five predict-one performance](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-5_predict-1_p.jpg) | 11.38 | 70.55 |
+| Pre-trained LSTM using LSTM-AE | ![predict-five lstm-ae performance](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-5_lstmae_p.jpg) | 9.30 | 56.95 |
+| Not using Pre-trained LSTM | ![not using pre-trained lstm performance](https://github.com/Shuntw6096/Stock-Trend-Prediction/blob/new1/img/predict-5_non_p.jpg) | 9.14 | 72.35 |
 
 
 
